@@ -6,13 +6,14 @@ public class Prime {
         System.out.println("Enter a number:");
         int n = sc.nextInt();
         boolean isPrime = true;
-
+        for(int i=0;i<=n;i++)
+        
         if (n <= 1) {
-            isPrime = false; // Numbers less than or equal to 1 are not prime
+            isPrime = false; 
         } else {
             for (int i = 2; i <= Math.sqrt(n); i++) {
                 if (n % i == 0) {
-                    isPrime = false; // Found a divisor, so not prime
+                    isPrime = false; 
                     break;
                 }
             }
@@ -24,6 +25,6 @@ public class Prime {
             System.out.println(n + " is Not Prime");
         }
 
-        sc.close(); // Close the scanner to prevent resource leak
+        sc.close(); 
     }
 }
