@@ -1,3 +1,4 @@
+package Java;
 
 interface Atm{
     // Public Abstract and Default Methods 

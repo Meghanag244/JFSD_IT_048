@@ -1,3 +1,4 @@
+package Java;
 public class RepeatingChar {
     public static void main(String[] args) {
         String str = "aditya";
