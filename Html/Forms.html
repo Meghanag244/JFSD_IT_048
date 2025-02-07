@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+    <style>
+
+        form{
+            display:flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+        }
+        label{
+            margin: 10px;
+            flex-grow: 1;
+
+
+        }
+        input{
+            margin: 10px;
+            flex-grow: 1;
+        }
+        .name{
+            flex-grow: 1;
+            flex-basis: 20PX;
+        }
+        .email{
+            margin: 20px;
+            flex-grow: 1;
+            flex-basis: 20PX;
+        }
+        button{
+            margin: 20px;
+            flex-grow: 1;
+            background-color: rgb(16, 133, 35);
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+        }
+    </style>
+
+</head>
+<body>
+    <form action="submit.php" method="post">
+        <label class="name">Name:</label>
+        <input type="text" name="name" id="name" required>
+        <br>
+        <label class="email">Email:</label>
+        <input type="email" name="email" id="email" required>
+        <br>
+        <label for="password">Password:</label>
+        <input type="password" name="password" id="password" required></br>
+        <button type="submit">Submit</button>
+        <br>
+    </form>
+    </body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex</title>
+        <style>
+            #content {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: center;
+        }
+        .small {
+        flex-grow: 1;
+        width: 100px;
+        height: 100px;
+        margin: 10px;
+        
+        }
+        .double {
+        width: 200px;
+        height: 200px;
+        margin: 10px;
+        flex-shrink
+        }
+
+        </style>
+</head>
+<body>
+    <h1>Flex</h1>
+    <div id="content">
+        <div class="small" style="background-color:red;">A</div>
+        <div class="small" style="background-color:lightblue;">B</div>
+        <div class="small" style="background-color:yellow;">C</div>
+        <div class="double" style="background-color:brown;">D</div>
+        <div class="double" style="background-color:lightgreen;">E</div>
+        <div class="small" style="background-color:brown;">F</div>
+    </div>
+</html>
