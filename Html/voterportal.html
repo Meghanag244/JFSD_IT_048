@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voter Portal</title>
+    <style>
+        body {
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            background-color: rgb(255, 254, 254);
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            width: 300px;
+            padding: 20px;
+            background: rgb(227, 231, 227);
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+            box-sizing: border-box;
+        }
+
+        label {
+            margin: 5px 0;
+        }
+
+        input {
+            margin: 5px 0 15px 0;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: rgb(16, 133, 35);
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: rgb(12, 100, 28);
+        }
+    </style>
+</head>
+<body>
+    
+    <h1>Voter Portal</h1>
+    <br>
+    <form id="voter-form">
+        <label for="name">Name:</label>
+        <input type="text" name="name" id="name" placeholder="Username" required>
+
+        <label for="age">Age:</label>
+        <input type="number" name="age" id="age" placeholder="Age" required>
+
+        <label for="nationality">Nationality:</label>
+        <input type="text" name="nationality" id="nationality" placeholder="Nationality" required>
+
+        <label for="id">ID:</label>
+        <input type="number" name="id" id="id" placeholder="ID" required>
+
+        <button type="submit">Submit</button>
+    </form>
+
+    <script>
+        document.getElementById("voter-form").addEventListener("submit", function(event) {
+            event.preventDefault();
+            checkEligibility();
+        });
+
+        function checkEligibility() {
+            var age = parseInt(document.getElementById("age").value);
+            var nationality = document.getElementById("nationality").value.trim().toLowerCase();
+
+            if (age < 18) {
+                alert("You are not eligible to vote. Minimum age is 18.");
+            } else if (nationality !== "india") {
+                alert("You are not eligible to vote. Only Indian citizens can vote.");
+            } else {
+                alert("You are eligible to vote.");
+            }
+        }
+    </script>
+</body>
+</html>

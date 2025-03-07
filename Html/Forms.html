@@ -6,15 +6,29 @@
     <title>Forms</title>
     <style>
 
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+            padding: 20px;
+            background-color: rgb(255, 254, 254);
+
+        }
+
         form{
             display:flex;
             flex-direction: column;
             flex-wrap: wrap;
+            width: 300px;
+            padding: 20px;
+            background: rgb(227, 231, 227);
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
         }
         label{
             margin: 10px;
             flex-grow: 1;
-
 
         }
         input{
@@ -22,11 +36,6 @@
             flex-grow: 1;
         }
         .name{
-            flex-grow: 1;
-            flex-basis: 20PX;
-        }
-        .email{
-            margin: 20px;
             flex-grow: 1;
             flex-basis: 20PX;
         }
@@ -42,17 +51,23 @@
 
 </head>
 <body>
-    <form action="submit.php" method="post">
-        <label class="name">Name:</label>
-        <input type="text" name="name" id="name" required>
-        <br>
-        <label class="email">Email:</label>
-        <input type="email" name="email" id="email" required>
+    <form id="Student form">
+        <label class="name" >Name:</label>
+        <input type="text" name="name" id="name" placeholder="Username" required>
         <br>
         <label for="password">Password:</label>
-        <input type="password" name="password" id="password" required></br>
+        <input type="password" name="password" id="password" placeholder="Password" required></br>
         <button type="submit">Submit</button>
         <br>
     </form>
+    <script>
+        var form=document.getElementById("Student form");
+        form.addEventListener("submit", function(event)
+        {
+                event.preventDefault();
+                alert("Form Submitted");
+            
+        });
+    </script>
     </body>
 </html>
